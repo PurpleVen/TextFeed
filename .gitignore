@@ -7,15 +7,7 @@
 /backend/package-lock.json
 
 
-# Ignore Vite config files
-/frontend/vite.config.js
 
-# Ignore .env files
-.env
-.env.local
-.env.development
-.env.test
-.env.production
 
 
 
