@@ -20,10 +20,7 @@
 .env.test
 .env.production
 
-# Ignore Docker-related files
-/docker-compose.yml
-/Dockerfile.backend
-/Dockerfile.frontend
+
 
 # Miscellaneous
 *.log
