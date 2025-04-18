@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
+console.log(process.env.MONGO_URI);
 const mongoose = require('mongoose');
 const firebaseAdmin = require('firebase-admin');
 const postsRoutes = require('./routes/posts');
