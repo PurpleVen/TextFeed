@@ -7,7 +7,6 @@
 /backend/package-lock.json
 
 # Ignore Firebase config files
-/frontend/src/firebase.js
 /backend/ServiceAccountKey.json
 
 # Ignore Vite config files
