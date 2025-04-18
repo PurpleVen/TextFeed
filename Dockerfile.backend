@@ -1,0 +1,17 @@
+# Dockerfile.backend
+
+# Use Node.js official image as base
+FROM node:16
+
+WORKDIR /app
+
+# Copy only backend files into the container
+COPY backend/package*.json ./
+RUN npm install
+
+COPY backend ./
+
+EXPOSE 5000
+
+# Start the server
+CMD ["node", "app.js"]
