@@ -8,7 +8,7 @@ export default defineConfig({
     host: true,
     port: 3000,
     proxy: {
-      '/api': 'http://localhost:5000', // Proxy /api requests to backend
+      '/api': 'https://textfeed.onrender.com', // Proxy /api requests to backend
     },
   },
 });

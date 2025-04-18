@@ -9,7 +9,7 @@ services:
     depends_on:
       - backend
     environment:
-      - VITE_BACKEND_URL=http://backend:5000 # Adjust backend URL if necessary
+      - VITE_BACKEND_URL=https://textfeed.onrender.com # Adjust backend URL if necessary
 
   backend:
     build:

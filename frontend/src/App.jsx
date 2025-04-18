@@ -19,7 +19,7 @@ const App = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/posts/posts', {
+      const res = await axios.get('https://textfeed.onrender.com/api/posts/posts', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(res.data);
@@ -48,7 +48,7 @@ const App = () => {
     if (!message.trim()) return;
     try {
       await axios.post(
-        'http://localhost:5000/api/posts/posts',
+        'https://textfeed.onrender.com/api/posts/posts',
         { user: user.displayName, message },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -63,7 +63,7 @@ const App = () => {
     if (!comments[postId]?.trim()) return;
     try {
       await axios.post(
-        `http://localhost:5000/api/posts/posts/${postId}/comment`,
+        `https://textfeed.onrender.com/api/posts/posts/${postId}/comment`,
         { user: user.displayName, message: comments[postId] },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -81,7 +81,7 @@ const App = () => {
       await new Promise((res) => setTimeout(res, 500)); // 1-second delay
 
       const res = await axios.get(
-        `http://localhost:5000/api/posts/posts/search?q=${searchQuery}`,
+        `https://textfeed.onrender.com/api/posts/posts/search?q=${searchQuery}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setPosts(res.data);
