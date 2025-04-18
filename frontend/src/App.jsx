@@ -111,7 +111,7 @@ const App = () => {
           <Button onClick={handleLogout} colorScheme="red">Logout</Button>
         </HStack>
 
-        <Heading mb={4} textAlign="center">Post Feed</Heading>
+        <Heading mb={4} textAlign="center">Text Feed</Heading>
 
         <Box mb={6}>
           <Heading size="md" mb={2}>Write what's on your mind</Heading>
