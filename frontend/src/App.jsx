@@ -19,7 +19,7 @@ const App = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('https://textfeed.onrender.com/api/posts/posts', {
+      const res = await axios.get('http://textfeed.onrender.com/api/posts/posts', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(res.data);
@@ -48,7 +48,7 @@ const App = () => {
     if (!message.trim()) return;
     try {
       await axios.post(
-        'https://textfeed.onrender.com/api/posts/posts',
+        'http://textfeed.onrender.com/api/posts/posts',
         { user: user.displayName, message },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -63,7 +63,7 @@ const App = () => {
     if (!comments[postId]?.trim()) return;
     try {
       await axios.post(
-        `https://textfeed.onrender.com/api/posts/posts/${postId}/comment`,
+        `http://textfeed.onrender.com/api/posts/posts/${postId}/comment`,
         { user: user.displayName, message: comments[postId] },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -81,7 +81,7 @@ const App = () => {
       await new Promise((res) => setTimeout(res, 500)); // 1-second delay
 
       const res = await axios.get(
-        `https://textfeed.onrender.com/api/posts/posts/search?q=${searchQuery}`,
+        `http://textfeed.onrender.com/api/posts/posts/search?q=${searchQuery}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setPosts(res.data);
@@ -96,7 +96,7 @@ const App = () => {
     return (
       <ChakraProvider>
         <Box p={8} textAlign="center">
-          <Heading mb={6}>Welcome to Posts Feed</Heading>
+          <Heading mb={6}>Welcome to Text Feed</Heading>
           <Button onClick={handleLogin} colorScheme="teal">Login with Google</Button>
         </Box>
       </ChakraProvider>

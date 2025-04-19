@@ -6,11 +6,10 @@
 /frontend/package-lock.json
 /backend/package-lock.json
 
+#env
+/backend/env
+/frontend/env
 
+#secret key.json
 
-
-
-
-# Miscellaneous
-*.log
-*.log.*
+/backend/ServiceAccountKey.json

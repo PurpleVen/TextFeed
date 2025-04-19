@@ -1,14 +1,18 @@
 const express = require('express');
 const cors = require('cors');
-const allowedOrigins = ['https://text-feed.vercel.app'];
+const allowedOrigins = ['https://text-feed.vercel.app', 'http://localhost:3000'];
+// const allowedOrigins = ['http://localhost:3000'];
 const bodyParser = require('body-parser');
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: './.env' });
 console.log(process.env.MONGO_URI);
 const mongoose = require('mongoose');
 const firebaseAdmin = require('firebase-admin');
 const postsRoutes = require('./routes/posts');
 
-const serviceAccount = require('./ServiceAccountKey.json');
+const decodedKey = Buffer.from(process.env.VITE_FIREBASE_SERVICE_ACCOUNT_KEY_BASE64, 'base64').toString('utf8');
+const serviceAccount = JSON.parse(decodedKey);
+
+// const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
 firebaseAdmin.initializeApp({
   credential: firebaseAdmin.credential.cert(serviceAccount),
 });
