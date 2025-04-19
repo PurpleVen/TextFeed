@@ -7,8 +7,9 @@
 /backend/package-lock.json
 
 #env
-/backend/env
-/frontend/env
+/backend/.env
+/frontend/.env
+.env
 
 #secret key.json
 
