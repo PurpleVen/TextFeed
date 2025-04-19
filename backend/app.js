@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const allowedOrigins = ['https://text-feed.vercel.app'];
 const bodyParser = require('body-parser');
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config();
 console.log(process.env.MONGO_URI);
 const mongoose = require('mongoose');
 const firebaseAdmin = require('firebase-admin');
