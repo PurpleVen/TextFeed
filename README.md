@@ -1,4 +1,4 @@
-# Posts Feed With Search
+# Text Feed With Search
 
 A full-stack web application for creating posts, adding comments, and searching through posts and comments. This project includes authentication via Firebase, a RESTful API for posts and comments, and MongoDB for data storage.
 
